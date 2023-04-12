@@ -24,37 +24,31 @@ public class Transaction implements CustomEntity, Serializable {
 
     private String blockHash;
 
+    private String metadata;
+
+    private String redirectUrl;
+
     private String data;
 
     private String nodeSignature;
+
+    private String orderId;
 
     private String initiator;
 
     private String fromHexHash;
 
+    private String description;
+
     private Long transactionIndex;
 
     private String rawData;
 
-    private Instant creationDate;
-
     private String type;
-
-    private String nonce;
 
     private String gasLimit;
 
-    private String r;
-
-    private String toHexHash;
-
-    private String s;
-
     private String assetId;
-
-    private String v;
-
-    private String blockNumber;
 
     @JsonProperty(required = true)
     private String hexHash;
@@ -62,9 +56,29 @@ public class Transaction implements CustomEntity, Serializable {
     @JsonProperty(required = true)
     private String signedHash;
 
+    private String currency;
+
     private String value;
 
+    private Instant expirationDate;
+
     private String gasPrice;
+
+    private Instant creationDate;
+
+    private String nonce;
+
+    private String webhookUrl;
+
+    private String r;
+
+    private String toHexHash;
+
+    private String s;
+
+    private String v;
+
+    private String blockNumber;
 
     @Override()
     public String getUuid() {
@@ -91,6 +105,22 @@ public class Transaction implements CustomEntity, Serializable {
         this.blockHash = blockHash;
     }
 
+    public String getMetadata() {
+        return metadata;
+    }
+
+    public void setMetadata(String metadata) {
+        this.metadata = metadata;
+    }
+
+    public String getRedirectUrl() {
+        return redirectUrl;
+    }
+
+    public void setRedirectUrl(String redirectUrl) {
+        this.redirectUrl = redirectUrl;
+    }
+
     public String getData() {
         return data;
     }
@@ -105,6 +135,14 @@ public class Transaction implements CustomEntity, Serializable {
 
     public void setNodeSignature(String nodeSignature) {
         this.nodeSignature = nodeSignature;
+    }
+
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
     }
 
     public String getInitiator() {
@@ -123,6 +161,14 @@ public class Transaction implements CustomEntity, Serializable {
         this.fromHexHash = fromHexHash;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public Long getTransactionIndex() {
         return transactionIndex;
     }
@@ -139,20 +185,84 @@ public class Transaction implements CustomEntity, Serializable {
         this.rawData = rawData;
     }
 
-    public Instant getCreationDate() {
-        return creationDate;
-    }
-
-    public void setCreationDate(Instant creationDate) {
-        this.creationDate = creationDate;
-    }
-
     public String getType() {
         return type;
     }
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getGasLimit() {
+        return gasLimit;
+    }
+
+    public void setGasLimit(String gasLimit) {
+        this.gasLimit = gasLimit;
+    }
+
+    public String getAssetId() {
+        return assetId;
+    }
+
+    public void setAssetId(String assetId) {
+        this.assetId = assetId;
+    }
+
+    public String getHexHash() {
+        return hexHash;
+    }
+
+    public void setHexHash(String hexHash) {
+        this.hexHash = hexHash;
+    }
+
+    public String getSignedHash() {
+        return signedHash;
+    }
+
+    public void setSignedHash(String signedHash) {
+        this.signedHash = signedHash;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
+    public Instant getExpirationDate() {
+        return expirationDate;
+    }
+
+    public void setExpirationDate(Instant expirationDate) {
+        this.expirationDate = expirationDate;
+    }
+
+    public String getGasPrice() {
+        return gasPrice;
+    }
+
+    public void setGasPrice(String gasPrice) {
+        this.gasPrice = gasPrice;
+    }
+
+    public Instant getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(Instant creationDate) {
+        this.creationDate = creationDate;
     }
 
     public String getNonce() {
@@ -163,12 +273,12 @@ public class Transaction implements CustomEntity, Serializable {
         this.nonce = nonce;
     }
 
-    public String getGasLimit() {
-        return gasLimit;
+    public String getWebhookUrl() {
+        return webhookUrl;
     }
 
-    public void setGasLimit(String gasLimit) {
-        this.gasLimit = gasLimit;
+    public void setWebhookUrl(String webhookUrl) {
+        this.webhookUrl = webhookUrl;
     }
 
     public String getR() {
@@ -195,14 +305,6 @@ public class Transaction implements CustomEntity, Serializable {
         this.s = s;
     }
 
-    public String getAssetId() {
-        return assetId;
-    }
-
-    public void setAssetId(String assetId) {
-        this.assetId = assetId;
-    }
-
     public String getV() {
         return v;
     }
@@ -217,38 +319,6 @@ public class Transaction implements CustomEntity, Serializable {
 
     public void setBlockNumber(String blockNumber) {
         this.blockNumber = blockNumber;
-    }
-
-    public String getHexHash() {
-        return hexHash;
-    }
-
-    public void setHexHash(String hexHash) {
-        this.hexHash = hexHash;
-    }
-
-    public String getSignedHash() {
-        return signedHash;
-    }
-
-    public void setSignedHash(String signedHash) {
-        this.signedHash = signedHash;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
-
-    public String getGasPrice() {
-        return gasPrice;
-    }
-
-    public void setGasPrice(String gasPrice) {
-        this.gasPrice = gasPrice;
     }
 
     @Override()

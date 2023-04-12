@@ -19,7 +19,7 @@
             "maxLength": 64
         },
         "metadata": {
-            "storages": [],
+            "storages": ["SQL"],
             "nullable": true,
             "description": "Metadata",
             "readOnly": false,
@@ -30,7 +30,7 @@
             "maxLength": 255
         },
         "redirectUrl": {
-            "storages": [],
+            "storages": ["SQL"],
             "nullable": true,
             "description": "Redirect URL",
             "readOnly": false,
@@ -65,7 +65,7 @@
             "maxLength": 255
         },
         "orderId": {
-            "storages": [],
+            "storages": ["SQL"],
             "nullable": true,
             "description": "Order ID",
             "readOnly": false,
@@ -99,7 +99,7 @@
             "maxLength": 40
         },
         "description": {
-            "storages": [],
+            "storages": ["SQL"],
             "nullable": true,
             "description": "Description",
             "readOnly": false,
@@ -215,15 +215,15 @@
             "maxLength": 255
         },
         "expirationDate": {
-            "storages": [],
+            "storages": ["SQL"],
             "nullable": true,
+            "format": "date-time",
             "description": "Expiration date",
             "readOnly": false,
             "versionable": false,
             "id": "CE_Transaction_expirationDate",
             "title": "Transaction.expirationDate",
-            "type": "string",
-            "maxLength": 255
+            "type": "string"
         },
         "gasPrice": {
             "storages": ["SQL"],
@@ -262,9 +262,9 @@
             "maxLength": 255
         },
         "webhookUrl": {
-            "storages": [],
+            "storages": ["SQL"],
             "nullable": true,
-            "description": "Webhoo URL",
+            "description": "Webhook URL",
             "readOnly": false,
             "versionable": false,
             "id": "CE_Transaction_webhookUrl",
